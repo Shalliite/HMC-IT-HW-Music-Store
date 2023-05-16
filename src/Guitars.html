@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="flex-justify-center">
+        <div class="navBar input-field">
+            <a class="input-field" href="Index.html">Back</a>
+        </div>
+    </div>
+    <h1>
+        Guitars
+    </h1>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                <a href="https://www.zzounds.com/item--GIBHP735R">
+                    <img src="https://th.bing.com/th/id/OIP.W7NYd-pIqWd08qofLLjxLwHaHa?pid=ImgDet&rs=1"/>
+                </a>
+            </td>
+            <td>Gibson HP735R Cutaway Acoustic-Electric Guitar</td>
+            <td>1000 EUR</td>
+            <td>
+                <input id="guitarQty" class="input-field" type="number">
+            </td>
+            <td>
+                <button onclick="addGuitarToCart()" id="guitarAddToCart" class="input-field">
+                    Add to cart
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <h2 id="guitarAddedSuccessfully"></h2>
+
+</body>
+</html>

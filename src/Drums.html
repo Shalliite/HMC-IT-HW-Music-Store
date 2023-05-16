@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <div class="flex-justify-center">
+        <div class="navBar">
+            <a class="input-field" href="Index.html">Back</a>
+        </div>
+    </div>
+    <h1>
+        Drums
+    </h1>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                <a href="https://usa.yamaha.com/products/musical_instruments/drums/ac_drums/drum_sets/live_custom/index.html">
+                    <img src="https://usa.yamaha.com/files/live_custom_main_image_5441x3613_cca6e8ca68f7b9618d7b940db963ce3c.jpg"/>
+                </a>
+            </td>
+            <td>Yamaha Live Custom</td>
+            <td>3000 EUR</td>
+            <td>
+                <input id="drumQty" class="input-field" type="number">
+            </td>
+            <td>
+                <button onclick="addDrumToCart()" id="drumsAddToCart" class="input-field">
+                    Add to cart
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <h2 id="drumAddedSuccessfully"></h2>
+
+</body>
+
+</html>
