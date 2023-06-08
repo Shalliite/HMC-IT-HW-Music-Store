@@ -1,0 +1,266 @@
+* {
+    --content-color: black;
+    --background-color: white;
+    --container-color: rgb(238, 238, 238);
+    --input-field-color: rgb(206, 206, 206);
+    --item-hover-color: rgb(255, 197, 197);
+    --accent-color: rgb(175, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: var(--content-color);
+    scroll-behavior: smooth;
+}
+
+body > .item-popup {
+    position: fixed;
+    background-color: var(--background-color);
+    padding: 50px;
+    border-radius: 20px;
+    top: 40%;
+    left: 25%;
+    width: 48%;
+    height: 270px;
+}
+
+    body > .item-popup > .content {
+        height: inherit;
+        word-wrap: break-word;
+        overflow: scroll;
+    }
+
+body  > .content {
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: white;
+}
+
+header {
+    border-radius: 20px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+}
+
+    header .navigation-top {
+        align-self: center;
+        padding: 10px;
+        max-height: 100px;
+    }
+
+        header .navigation-top object {
+            max-height: inherit;
+        }
+
+    header .navigation-bottom {
+        border-radius: 15px;
+        align-self: center;
+        padding: inherit;
+        background-color: var(--content-color);
+    }
+
+        header .navigation-bottom a {
+            border-radius: 15px;
+            background-color: var(--content-color);
+            color: var(--background-color);
+            padding: inherit;
+            text-decoration: none;
+        }
+
+        header .navigation-bottom a:hover {
+            color: var(--content-color);
+            background-color: var(--accent-color);
+            transition-duration: 0.2s;
+        }
+
+h1 {
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+.text-danger {
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 25pt;
+}
+
+button, input {
+    border-radius: 7px;
+    border-color: transparent;
+    background-color: var(--input-field-color);
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+
+/* For item category */
+.category-item-list-item-container:hover {
+    background-color: var(--item-hover-color);
+    transition-duration: 0.2s;
+}
+
+.category-item-list-item-container {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 30px;
+    display: grid;
+    background-color: var(--container-color);
+    height: 200px;
+    grid-template-columns: 20% 60%;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+    .category-item-list-item-container .image-container {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+        justify-self: center;
+        height: inherit;
+        cursor: pointer;
+    }
+
+        .category-item-list-item-container .image-container img {
+            border-radius: 10px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .category-item-list-item-container .name-container {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        justify-self: start;
+    }
+
+    .category-item-list-item-container .price-container {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        justify-self: start;
+        font-size: 20pt;
+    }
+
+    .category-item-list-item-container .qty-input-container {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+    }
+
+        .category-item-list-item-container .qty-input-container input {
+            background-color: var(--background-color);
+            width: 50px;
+        }
+
+    .category-item-list-item-container .add-to-cart-button-container {
+        grid-column: 3;
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+    }
+
+        .category-item-list-item-container .add-to-cart-button-container button {
+            padding: 10px;
+        }
+
+
+
+
+
+/* For cart category */
+.cart-area-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-area-container .cart-item-list-container {
+    padding: 25px;
+    width: 80%;
+}
+
+.cart-area-container .purchase-area-container {
+    border-radius: 20px;
+    width: 20%;
+    padding: 25px;
+    background-color: var(--container-color);
+}
+
+.cart-item-list-item-container {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    display: grid;
+    background-color: var(--container-color);
+    height: 80px;
+    grid-template-columns: 20% 60%;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+    .cart-item-list-item-container .image-container {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+        justify-self: center;
+        height: inherit;
+    }
+
+        .cart-item-list-item-container .image-container img {
+            border-radius: 10px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .cart-item-list-item-container .name-container {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        justify-self: start;
+    }
+
+    .cart-item-list-item-container .price-container {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        justify-self: start;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    .cart-item-list-item-container .qty-input-container {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+    }
+
+        .cart-item-list-item-container .qty-input-container input {
+            background-color: var(--background-color);
+            width: 50px;
+        }
+
+    .cart-item-list-item-container .remove-from-cart-button-container {
+        grid-column: 3;
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+    }
+
+        .cart-item-list-item-container .remove-from-cart-button-container button {
+            padding: 5px;
+            font-size: 10pt;
+        }

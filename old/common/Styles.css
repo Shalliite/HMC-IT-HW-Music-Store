@@ -1,0 +1,130 @@
+* {
+    --default-font-size: 13pt;
+    --color-1: black;
+    --color-2: #0d1321;
+    --color-3: #1d2d44;
+    --color-4: #3e5c76;
+    --color-5: #748cab;
+    --color-6: #f0ebd8;
+    --color-7: white;
+    font-family: 'Arial';
+    font-size: var(--default-font-size);
+
+}
+
+body {
+    background-color: var(--color-7);
+    padding: 5% 10%;
+}
+
+h1, h2 {
+    color: var(--color-2);
+    background-color: transparent;
+}
+
+h1 {
+    font-size: calc(var(--default-font-size) * 2);
+}
+
+h2 {
+    font-size: calc(var(--default-font-size) * 1.5);
+}
+
+table {
+    width: 100%;
+}
+
+table th, table td {
+    text-align: left;
+}
+
+img {
+    max-width: 200px;
+}
+
+#homeGraphic {
+    width: 250px;
+    margin: 5% 5%;
+}
+
+#categoryGraphic {
+    width: 100px;
+    margin: 1% 1%;
+}
+
+/* Add a black background color to the top navigation */
+.flex-justify-center .navBar {
+    color: var(--color-2);
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    max-width: 40px;
+}
+
+.flex-justify-left {
+    display: flex;
+    justify-content: left;
+}
+
+.input-field {
+    border-radius: 8px;
+}
+
+button.input-field {
+    border: none;
+    color: var(--color-2);
+    background-color: var(--color-6);
+    font-size: var(--default-font-size);
+    padding: 10px 12px;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    color: var(--color-6);
+    font-size: calc(var(--default-font-size) - 30%);
+    background-color: var(--color-2);
+}
+
+/* Style the links inside the navigation bar */
+.navBar a.input-field {
+    --font-size-a: calc(var(--default-font-size) + 30%);
+    font-size: var(--font-size-a);
+    font-weight: bold;
+    float: left;
+    color: var(--color-2);
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    color: var(--color-6);
+    font-size: calc(var(--font-size-a) + 50%);
+    background-color: var(--color-2);
+    cursor: pointer;
+}
+
+.flex-justify-center button#purchaseButton {
+    --purchase-button-font-size: calc(var(--default-font-size) * 2);
+    font-size: var(--purchase-button-font-size);
+    font-weight: bold;
+    padding: 14px 16px;
+}
+
+.flex-justify-center button#purchaseButton:hover {
+    font-size: calc(var(--purchase-button-font-size) - 30%);
+}
+
+.add-to-cart-column {
+    text-align: center;
+}

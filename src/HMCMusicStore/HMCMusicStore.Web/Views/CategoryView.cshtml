@@ -1,0 +1,50 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using HMCMusicStore.Web.Models.Resources
+@model HMCMusicStore.Web.Models.CategoryModel
+@{
+    Layout = "_MainLayout";
+}
+
+<h1>@Model.Title</h1>
+<div class="category-item-list-container">
+    @foreach (var item in Model.Items)
+    {
+        <div class="category-item-list-item-container">
+            <div class="image-container">
+                <img id="@item.Uid" src="@item.ImageSource">
+            </div>
+            <div class="name-container">
+                @item.Title
+            </div>
+            <div class="item-description-container">
+                @item.Description
+            </div>
+            <div class="price-container">
+                @item.Price €
+            </div>
+            <div class="qty-input-container">
+                <input id=@item.Uid class="qty-to-add-to-cart-input" type="number" min="1">
+            </div>
+            <div class="add-to-cart-button-container">
+                <button id=@item.Uid class="add-to-cart-button" type="submit">
+                    @InputLabels.AddToCartButton
+                </button>
+            </div>
+        </div>
+        <script>
+            $('.add-to-cart-button#@item.Uid').click(function() {
+                $.ajax({
+                    url: "/Category/AddToCart",
+                    method: 'POST',
+                    data: {
+                        UidToUpdate: '@item.Uid',
+                        CountToUpdate: $('.qty-to-add-to-cart-input#@item.Uid').val(),
+                    },
+                    success: function(data) {
+                        alert(data);
+                    }
+                });
+            });
+        </script>
+    }
+</div>
